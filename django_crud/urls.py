@@ -1,10 +1,11 @@
 from django.urls import include, path
 from rest_framework import routers
-from django_crud.quickstart import views
+from django_crud.marketplace.views import user, group, bicycle
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'users', user.UserViewSet)
+router.register(r'groups', group.GroupViewSet)
+router.register(r'bicycles', bicycle.BicycleViewSet)
 
 
 urlpatterns = [
