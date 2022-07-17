@@ -23,7 +23,6 @@ class BicycleViewSet(GenericViewSet,
 
     def list(self, request, *args, **kwargs):
         instance = self.get_queryset()
-        instance = instance
         serializer = self.get_serializer(instance, many=True)
 
         return Response(serializer.data)
