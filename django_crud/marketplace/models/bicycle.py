@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Bicycle(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
